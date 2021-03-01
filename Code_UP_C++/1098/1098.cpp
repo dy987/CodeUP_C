@@ -7,19 +7,39 @@
 
 int main()
 {
-	int n = 0;
-	int data[24] = { 0, };
+	int w, h, n, l, d;
+	int x, y;
+	int data[101][101] = { 0, };
 
+	scanf("%d", &w);
+	scanf("%d", &h);
 	scanf("%d", &n);
 
 	for (int i = 0; i < n; i++) {
-		int num;
-		scanf("%d", &num);
-		data[num]++;
+		scanf("%d", &l);
+		scanf("%d", &d);
+		scanf("%d", &x);
+		scanf("%d", &y);
+		
+		if (d == 0) {
+			for (int i = 0; i < l; i++) {
+				data[y+i][x] = 1;
+			}
+		}
+		else if (d == 1) {
+			for (int i = 0; i < l; i++) {
+				data[y][x+i] = 1;
+			}
+
+		}
+
 	}
 
-	for (int i = 1; i <= 23; i++) {
-		printf("%d ", data[i]); //1~23 번 배열에 저장되어있는 값 출력하기
+	for (int i = 1; i <= w; i++) {
+		for (int j = 1; j <= h; j++) {
+			printf("%d ",data[j][i]);
+		}
+		printf("\n");
 	}
 
 	return 0;
