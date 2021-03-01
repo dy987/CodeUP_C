@@ -12,16 +12,21 @@ int main()
 	int d;
 	int n;
 
-	scanf("%d", &n);
+	
 	scanf("%d", &a);
 	scanf("%d", &m);
 	scanf("%d", &d);
-	int array[100] = { a, };
+	scanf("%d", &n);
+	long long int array[100] = { a, };
+	array[1] = a;
 
-	for (int i = 1; i < 100; i++)
-		array[i] = array[i - 1]*m+d;
+	for (int i = 2; i < 100; i++)
+		array[i] = array[i-1]*m+d;
+
+	/*for (int i = 1; i < 20; i++)
+		printf("%d : %d\n", i, array[i]);*/
 	
-	printf("%d",array[n]);
+	printf("%lld",array[n]);
 
 
 
