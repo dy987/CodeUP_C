@@ -1,6 +1,5 @@
 ﻿//https://codeup.kr/problemsetsol.php?psid=23
-//1094 : [기초-1차원배열] 이상한 출석 번호 부르기2(설명)
-
+//1098 : [기초-2차원배열] 설탕과자 뽑기
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
